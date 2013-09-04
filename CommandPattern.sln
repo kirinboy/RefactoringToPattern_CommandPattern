@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandPattern", "CommandPattern\CommandPattern.csproj", "{970568DB-95CF-413F-B08E-EFC8C047B207}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandPatternTest", "CommandPatternFacts\CommandPatternTest.csproj", "{DD493A98-C734-4FFE-BE38-BAF0CE334D7C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{970568DB-95CF-413F-B08E-EFC8C047B207}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{970568DB-95CF-413F-B08E-EFC8C047B207}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{970568DB-95CF-413F-B08E-EFC8C047B207}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{970568DB-95CF-413F-B08E-EFC8C047B207}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD493A98-C734-4FFE-BE38-BAF0CE334D7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD493A98-C734-4FFE-BE38-BAF0CE334D7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD493A98-C734-4FFE-BE38-BAF0CE334D7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD493A98-C734-4FFE-BE38-BAF0CE334D7C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
