@@ -1,6 +1,6 @@
 namespace CommandPattern
 {
-    public class LightOffCommand
+    public class LightOffCommand : ICommand
     {
         private readonly Light light;
 
@@ -9,7 +9,7 @@ namespace CommandPattern
             this.light = light;
         }
 
-        public void LightOff()
+        public void Execute()
         {
             light.Off();
         }

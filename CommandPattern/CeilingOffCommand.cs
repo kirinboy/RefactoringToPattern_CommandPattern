@@ -1,6 +1,6 @@
 namespace CommandPattern
 {
-    public class CeilingOffCommand
+    public class CeilingOffCommand : ICommand
     {
         private readonly Ceiling ceiling;
 
@@ -9,7 +9,7 @@ namespace CommandPattern
             this.ceiling = ceiling;
         }
 
-        public void CeilingOff()
+        public void Execute()
         {
             ceiling.Off();
         }

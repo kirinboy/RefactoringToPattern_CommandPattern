@@ -43,6 +43,7 @@
     <Compile Include="Ceiling.cs" />
     <Compile Include="CeilingHighCommand.cs" />
     <Compile Include="CeilingOffCommand.cs" />
+    <Compile Include="ICommand.cs" />
     <Compile Include="StereoOffCommand.cs" />
     <Compile Include="Light.cs" />
     <Compile Include="LightOffCommand.cs" />

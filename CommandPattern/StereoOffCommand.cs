@@ -1,6 +1,6 @@
 namespace CommandPattern
 {
-    public class StereoOffCommand
+    public class StereoOffCommand : ICommand
     {
         private readonly Stereo stereo;
 
@@ -9,7 +9,7 @@ namespace CommandPattern
             this.stereo = stereo;
         }
 
-        public void StereoOff()
+        public void Execute()
         {
             stereo.Off();
         }
