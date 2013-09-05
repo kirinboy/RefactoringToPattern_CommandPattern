@@ -41,10 +41,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Ceiling.cs" />
+    <Compile Include="CeilingHighCommand.cs" />
+    <Compile Include="CeilingOffCommand.cs" />
+    <Compile Include="StereoOffCommand.cs" />
     <Compile Include="Light.cs" />
+    <Compile Include="LightOffCommand.cs" />
+    <Compile Include="LightOnCommand.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RemoteControl.cs" />
     <Compile Include="Stereo.cs" />
+    <Compile Include="StereoOnCommand.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

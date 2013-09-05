@@ -16,25 +16,21 @@
         public void On(int slot)
         {
             if (slot == 1)
-                light.On();
+                new LightOnCommand(light).LightOn();
             if (slot == 2)
-                ceiling.High();
+                new CeilingHighCommand(ceiling).CeilingHigh();
             if (slot == 3)
-            {
-                stereo.On();
-                stereo.SetCd();
-                stereo.SetVolume(11);
-            }
+                new StereoOnCommand(stereo).StereoOn();
         }
 
         public void Off(int slot)
         {
             if (slot == 1)
-                light.Off();
+                new LightOffCommand(light).LightOff();
             if (slot == 2)
-                ceiling.Off();
+                new CeilingOffCommand(ceiling).CeilingOff();
             if (slot == 3)
-                stereo.Off();
+                new StereoOffCommand(stereo).StereoOff();
         }
     }
 }
