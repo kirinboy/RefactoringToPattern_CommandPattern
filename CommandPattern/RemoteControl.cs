@@ -1,4 +1,6 @@
-﻿namespace CommandPattern
+﻿using System.Collections.Generic;
+
+namespace CommandPattern
 {
     public class RemoteControl
     {
@@ -15,22 +17,27 @@
 
         public void On(int slot)
         {
-            if (slot == 1)
-                new LightOnCommand(light).Execute();
-            if (slot == 2)
-                new CeilingHighCommand(ceiling).Execute();
-            if (slot == 3)
-                new StereoOnCommand(stereo).Execute();
+            var onCommands = new Dictionary<int, ICommand>();
+            var lightOnCommand = new LightOnCommand(light);
+            var ceilingHighCommand = new CeilingHighCommand(ceiling);
+            var stereoOnCommand = new StereoOnCommand(stereo);
+            onCommands.Add(1, lightOnCommand);
+            onCommands.Add(2, ceilingHighCommand);
+            onCommands.Add(3, stereoOnCommand);
+
+            onCommands[slot].Execute();
         }
 
         public void Off(int slot)
         {
-            if (slot == 1)
-                new LightOffCommand(light).Execute();
-            if (slot == 2)
-                new CeilingOffCommand(ceiling).Execute();
-            if (slot == 3)
-                new StereoOffCommand(stereo).Execute();
+            var offCommands = new Dictionary<int, ICommand>();
+            var lightOffCommand = new LightOffCommand(light);
+            var ceilingOffCommand = new CeilingOffCommand(ceiling);
+            var stereoOffCommand = new StereoOffCommand(stereo);
+            offCommands.Add(1, lightOffCommand);
+            offCommands.Add(2, ceilingOffCommand);
+            offCommands.Add(3, stereoOffCommand);
+            offCommands[slot].Execute();
         }
     }
 }
