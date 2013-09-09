@@ -9,9 +9,9 @@ namespace CommandPattern
 
         public RemoteControl(Light light, Ceiling ceiling, Stereo stereo)
         {
-            offCommands.Add(1, new LightOffCommand(light));
-            offCommands.Add(2, new CeilingOffCommand(ceiling));
-            offCommands.Add(3, new StereoOffCommand(stereo));
+            SetOffCommand(1, new LightOffCommand(light));
+            SetOffCommand(2, new CeilingOffCommand(ceiling));
+            SetOffCommand(3, new StereoOffCommand(stereo));
             SetOnCommand(1, new LightOnCommand(light));
             SetOnCommand(2, new CeilingHighCommand(ceiling));
             SetOnCommand(3, new StereoOnCommand(stereo));
@@ -30,6 +30,11 @@ namespace CommandPattern
         private void SetOnCommand(int slot, ICommand command)
         {
             onCommands.Add(slot, command);
+        }
+
+        private void SetOffCommand(int slot, ICommand command)
+        {
+            offCommands.Add(slot, command);
         }
     }
 }
