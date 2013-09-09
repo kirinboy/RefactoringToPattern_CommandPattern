@@ -46,10 +46,15 @@ namespace CommandPattern
 
         private Dictionary<int, ICommand> GetOffCommands()
         {
-            offCommands.Add(1, new LightOffCommand(light));
-            offCommands.Add(2, new CeilingOffCommand(ceiling));
-            offCommands.Add(3, new StereoOffCommand(stereo));
+            SetOffCommand(1, new LightOffCommand(light));
+            SetOffCommand(2, new CeilingOffCommand(ceiling));
+            SetOffCommand(3, new StereoOffCommand(stereo));
             return offCommands;
+        }
+
+        private void SetOffCommand(int slot, ICommand command)
+        {
+            offCommands.Add(slot, command);
         }
     }
 }
