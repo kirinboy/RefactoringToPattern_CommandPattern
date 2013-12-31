@@ -1,4 +1,4 @@
-RefactoringToPattern_CommandPattern
+CommandPattern
 ===================================
 ### Example
 Command pattern case from book "Head First Design Pattern"
